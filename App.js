@@ -4,11 +4,15 @@ import { Box, Heading, NativeBaseProvider } from "native-base";
 import Login from "./screens/Login";
 import { NavigationContainer } from "@react-navigation/native";
 import LoginStack from "./navigation/LoginStack";
+import MainStack from "./navigation/MainStack";
 const App = () =>{
 return <NativeBaseProvider>
     <SafeAreaView style={styles.container}>
       <NavigationContainer>
-        <LoginStack/> 
+        {
+          true ? <MainStack/>:    <LoginStack/> 
+        }
+    
       </NavigationContainer>
    
     </SafeAreaView>
