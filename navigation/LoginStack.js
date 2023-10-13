@@ -16,7 +16,7 @@ screenOptions={{
 }}
 
 >
-        <Stack.Screen name="SignupScreen" component={Signup}/>
+        {/* <Stack.Screen name="SignupScreen" component={Signup}/> */}
         <Stack.Screen name="LoginScreen" component={Login} />
        
     </Stack.Navigator>

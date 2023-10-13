@@ -10,7 +10,7 @@ return <NativeBaseProvider>
     <SafeAreaView style={styles.container}>
       <NavigationContainer>
         {
-          true ? <MainStack/>:    <LoginStack/> 
+               <LoginStack/> 
         }
     
       </NavigationContainer>
