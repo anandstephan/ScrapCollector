@@ -1,4 +1,5 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { useNavigation } from '@react-navigation/native';
 import { View } from 'native-base';
 import color from '../constants/color';
 import CartIcon from '../images/icons/CartIcon';
@@ -7,11 +8,13 @@ import LocationIcon from '../images/icons/LocationIcon';
 import MainIcon from '../images/icons/MainIcon';
 import ProfileIcon from '../images/icons/ProfileIcon';
 import Home from '../screens/Home';
+import Location from '../screens/Location';
 import DrawerStack from './DrawerStack';
 
 const Tab = createBottomTabNavigator();
 
 const  BottomTabStack = () => {
+  const navigation = useNavigation()
   return (
     <Tab.Navigator
     screenOptions={{
@@ -29,7 +32,7 @@ const  BottomTabStack = () => {
        />
       <Tab.Screen
        name="Location"
-      component={Home}
+      component={Location}
         options={{
           tabBarIcon:({focused})=><LocationIcon focused={focused} />
         }}
