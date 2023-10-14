@@ -4,6 +4,7 @@ import {
   } from '@react-navigation/stack';
 import Login from '../screens/Login';
 import Signup from '../screens/Signup';
+import OnBoarding from '../screens/OnBoarding';
 
 
 const Stack = createStackNavigator();
@@ -17,7 +18,8 @@ screenOptions={{
 
 >
         {/* <Stack.Screen name="SignupScreen" component={Signup}/> */}
-        <Stack.Screen name="LoginScreen" component={Login} />
+        {/* <Stack.Screen name="LoginScreen" component={Login} /> */}
+        <Stack.Screen name="OnBoarding" component={OnBoarding} />
        
     </Stack.Navigator>
 }

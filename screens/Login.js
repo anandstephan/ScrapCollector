@@ -17,7 +17,7 @@ return <Box backgroundColor={colors.primary}>
         <VStack justifyContent={'center'} alignItems={'center'}>
         <Heading size={'xl'} color={colors.fontColor}>JOIN US</Heading>
         </VStack>
-        <HStack  marginTop={45} marginBottom={-30} marginLeft={19} justifyContent={"space-around"} marginRight={19} >
+        <HStack  marginTop={45} marginBottom={-30} marginLeft={18} justifyContent={"space-around"} marginRight={19} >
         <Input w={{
         base: "30%",
         md: "25%"
