@@ -17,6 +17,7 @@ screenOptions={{
 
 >
         <Stack.Screen name="HomeScreen" component={BottomTabStack} />
+        {/* <Stack.Screen name="CartScreen" component={BottomTabStack} /> */}
     </Stack.Navigator>
 }
 
