@@ -3,5 +3,7 @@ module.exports = {
     secondary:"#FFFFFF",
     fontColor:"#02542E",
     btnColor:"#259E73",
-    sliderColor:"#D6E8E1"
+    sliderColor:"#D6E8E1",
+    drawerBackgroundColor:"#B8DED0"
+    
 }

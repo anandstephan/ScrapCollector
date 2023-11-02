@@ -11,11 +11,13 @@ import Home from '../screens/Home';
 import Location from '../screens/Location';
 import DrawerStack from './DrawerStack';
 import colors from '../constants/colors';
-console.log(colors)
 const Tab = createBottomTabNavigator();
 
 const  BottomTabStack = () => {
   const navigation = useNavigation()
+  const drawerScreenOptions = {
+    customProp: 'YourValue', // Pass the desired prop here
+  };
   return (
     <Tab.Navigator
     screenOptions={{
@@ -27,37 +29,53 @@ const  BottomTabStack = () => {
        name="Home"
       component={DrawerStack}
       options={{
-        tabBarIcon:({focused})=><HomeIcon focused={focused}/>,
-        
+        tabBarIcon:({focused})=><HomeIcon focused={focused}/>,  
+      }}
+      initialParams={{
+        screenName:"Home"
       }}
        />
       <Tab.Screen
        name="Location"
-      component={Location}
+      component={DrawerStack}
         options={{
           tabBarIcon:({focused})=><LocationIcon focused={focused} />
         }}
+        initialParams={{
+          screenName:"Location"
+        }}
+
         />
           <Tab.Screen
        name="Main"
-      component={Home}
+      component={DrawerStack}
         options={{
           tabBarIcon:({focused})=> <View style={{backgroundColor:colors.btnColor,height:80,width:80,justifyContent:'center',alignItems:"center",borderRadius:"100%",marginTop:-10}}><MainIcon focused={focused} /></View>,
+        }}
+        initialParams={{
+          screenName:"Location"
         }}
         />
       <Tab.Screen
        name="Cart" 
-       component={SelectItemCart} 
+       component={DrawerStack} 
        options={{
         tabBarIcon:({focused})=><CartIcon focused={focused}/>
+      }}
+      initialParams={{
+        screenName:"Cart"
       }}
        />
       <Tab.Screen
        name="Profile" 
-       component={Home}
+       component={DrawerStack}
         options={{
         tabBarIcon:({focused})=><ProfileIcon focused={focused}/>
-      }}/>
+      }}
+      initialParams={{
+        screenName:"Profile"
+      }}
+      />
     </Tab.Navigator>
   );
 }
