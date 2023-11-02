@@ -2,7 +2,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import Home from '../screens/Home';
 import { Text } from 'native-base';
 import SidebarHeader from '../components/common/SidebarHeader';
-import color from '../constants/color';
+import colors from '../constants/colors';
 import Location from '../screens/Location';
 const Drawer = createDrawerNavigator();
 
@@ -10,7 +10,7 @@ const DrawerStack = () => {
   return (
     <Drawer.Navigator
     screenOptions={{
-        headerStyle:{backgroundColor:color.sliderColor},
+        headerStyle:{backgroundColor:colors.sliderColor},
         headerStatusBarHeight:5,
         headerTitle:"",
         headerRight:()=><SidebarHeader/>,
