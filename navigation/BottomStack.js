@@ -1,17 +1,17 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { useNavigation } from '@react-navigation/native';
 import { View } from 'native-base';
-import color from '../constants/color';
 import CartIcon from '../images/icons/CartIcon';
 import HomeIcon from '../images/icons/HomeIcon';
 import LocationIcon from '../images/icons/LocationIcon';
 import MainIcon from '../images/icons/MainIcon';
 import ProfileIcon from '../images/icons/ProfileIcon';
-import Cart from '../screens/Cart';
+import SelectItemCart from '../screens/SelectItemCart';
 import Home from '../screens/Home';
 import Location from '../screens/Location';
 import DrawerStack from './DrawerStack';
-
+import colors from '../constants/colors';
+console.log(colors)
 const Tab = createBottomTabNavigator();
 
 const  BottomTabStack = () => {
@@ -42,12 +42,12 @@ const  BottomTabStack = () => {
        name="Main"
       component={Home}
         options={{
-          tabBarIcon:({focused})=> <View style={{backgroundColor:color.btnColor,height:80,width:80,justifyContent:'center',alignItems:"center",borderRadius:"100%",marginTop:-10}}><MainIcon focused={focused} /></View>,
+          tabBarIcon:({focused})=> <View style={{backgroundColor:colors.btnColor,height:80,width:80,justifyContent:'center',alignItems:"center",borderRadius:"100%",marginTop:-10}}><MainIcon focused={focused} /></View>,
         }}
         />
       <Tab.Screen
        name="Cart" 
-       component={Cart} 
+       component={SelectItemCart} 
        options={{
         tabBarIcon:({focused})=><CartIcon focused={focused}/>
       }}

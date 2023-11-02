@@ -1,52 +1,48 @@
 import { View, Text, VStack, HStack,Button,Checkbox } from "native-base"
 import Search from "../components/common/Search"
-import Card from "../components/Home/Card"
 import ItemContainer from "../components/Home/ItemContainer"
-import color from "../constants/color";
 import colors from "../constants/colors"
 import { ScrollView,StyleSheet } from "react-native" 
 import Bottle from "../images/Bottle";
 import JapanCar from "../images/JapanCar"
+import CartButton from "../components/Cart/CartButton";
+import ItemDetailCard from "../components/Cart/ItemDetailCard";
+import { useNavigation } from "@react-navigation/native";
+const ItemArray = [ {
+    id:1,
+    pname:"Glass Bottle",
+    pprice:4,
+    pqty:30
+},{
+    id:2,
+    pname:"Japanse Cars",
+    pprice:124,
+    pqty:300 
+}]
     
 const Cart = () => {
-    
+    const navigation =     useNavigation()
+
+    const onBtnHandler = () =>{
+        navigation.navigate('Pickup')
+    }
+
+
     return <ScrollView style={styles.container}> 
-     <VStack bgColor={color.sliderColor} height={'100%'} marginTop={"12"} >
+     <VStack bgColor={colors.sliderColor} height={'100%'} marginTop={"12"} >
             <Search/>
             <Text style={{fontSize:17, marginLeft:"10%"}}>Subtotal= 583.00/-</Text>
             <Text style={styles.text}>Term and conditions</Text>
-            <Button borderRadius="xl" backgroundColor={colors.btnColor} marginX={8} p={3}
-            marginY={4}
-            >
-            Proceed the order of 5 items
-        </Button>
+            <CartButton txt="Proceed the order of 5 items" onPressHandler={onBtnHandler}/>
         <Text style={{color:"#259E73", marginLeft:'2%'}}> Select all Items</Text>
         <HStack>
-        <Checkbox marginLeft={'4%'} value="test" accessibilityLabel="This is a dummy checkbox" />
+        <Checkbox marginLeft={'4'} value="test" accessibilityLabel="This is a dummy checkbox" />
 
         </HStack>
             
         <VStack >
             
-            <HStack marginTop={15}  justifyContent={'space-evenly'} mx="2" >
-            <Bottle/>
-            <VStack>
-            <Text style={{fontSize:17}}> Glass Bottle  </Text>
-            <Text style={{ color:'#259E73'}}>₹ 4.00 Per piece </Text>
-            <Text style={{ color:'#259E73'}}>3 Point</Text>
-            </VStack>
-            </HStack>
-
-
-        
-            <HStack marginTop={50} justifyContent={'space-between'} mx="2">
-                <JapanCar />
-                <VStack>
-                    <Text style={{ fontSize:17 }}> Japanese Car </Text>
-                    <Text style={{ color: '#259E73' }}> Depends on condition </Text>
-                    <Text style={{ color: '#259E73' }}> 350 Points </Text>
-                </VStack>
-            </HStack>
+            {ItemArray.map(item => <ItemDetailCard key={item.id} {...item}/>)}
             </VStack>            
     </VStack>
     </ScrollView>

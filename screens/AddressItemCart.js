@@ -2,42 +2,33 @@ import { View, Text, VStack, HStack,Button,Checkbox } from "native-base"
 import Search from "../components/common/Search"
 import Card from "../components/Home/Card"
 import ItemContainer from "../components/Home/ItemContainer"
-import color from "../constants/color";
 import colors from "../constants/colors"
 import { ScrollView,StyleSheet } from "react-native" 
 import Bottle from "../images/Bottle";
 import JapanCar from "../images/JapanCar"
 import { AntDesign } from '@expo/vector-icons';
-
+import ItemDetailCard from "../components/Cart/ItemDetailCard"
+const ItemArray = [{
+    id:1,
+    pname:"Glass Bottle",
+    pprice:4,
+    pqty:30
+},{
+    id:2,
+    pname:"Japanse Cars",
+    pprice:124,
+    pqty:300 
+}]
     
-const Cart3 = () => {
+const AddressItemCart = () => {
     
     return <ScrollView style={styles.container}> 
-     <VStack bgColor={color.sliderColor} height={'100%'} marginTop={"12"} >
+     <VStack bgColor={colors.sliderColor} height={'100%'} marginTop={"12"} >
             <Search/>
         <Text style={{color:"#259E73", marginLeft:'35%', marginTop:'5'}}> ITEMS ADDED </Text>
             
             <VStack >
-            
-            <HStack marginTop={15} justifyContent={'space-evenly'} mx="2" >
-            <Bottle/>
-            <VStack>
-            <Text style={{fontSize:17}}> Glass Bottle  </Text>
-            <Text style={{ color:'#259E73'}}>₹ 4.00 Per piece </Text>
-            <Text style={{ color:'#259E73'}}>3 Point</Text>
-            </VStack>
-            </HStack>
-
-
-        
-            <HStack marginTop={42} marginBottom={-1} justifyContent={'space-between'} mx="2">
-                <JapanCar />
-                <VStack>
-                    <Text style={{ fontSize:17 }}> Japanese Car </Text>
-                    <Text style={{ color: '#259E73' }}> Depends on conditions </Text>
-                    <Text style={{ color: '#259E73' }}> 350 Points </Text>
-                </VStack>
-            </HStack>
+            {ItemArray.map(item => <ItemDetailCard key={item.id} {...item}/>)}
             <Button bgColor={"#5ceab7"} borderRadius="xl" marginX={15} p={5} marginY={8} >
             <Text style={{color:'#5AD199', justifyContent:'space-between', alignContent:'space-between' }}>
             <AntDesign name="pluscircleo" size={20} color="#5AD199" />
@@ -46,7 +37,7 @@ const Cart3 = () => {
 
         </Button>
 
-            <Button borderRadius="xl" borderWidth={1} bgColor={color.sliderColor} marginX={15} p={4}
+            <Button borderRadius="xl" borderWidth={1} bgColor={colors.sliderColor} marginX={15} p={4}
             marginY={8}
             >
                 <Text style={{color:'#259E73'}}>Select Address at next step
@@ -82,4 +73,4 @@ const Cart3 = () => {
         }
     })
 
-export default Cart3
+export default AddressItemCart

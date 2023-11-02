@@ -4,10 +4,10 @@ import Card from "../components/Home/Card"
 import LocationCard from "../components/Location/LocationCard"
 import LocationCard2 from "../components/Location/LocationCard2"
 import LocationCard3 from "../components/Location/LocationCard3"
-import color from "../constants/color"
+import colors from "../constants/colors"
 
 const Location = () =>{
-return <ScrollView bgColor={color.sliderColor} flex={1}>
+return <ScrollView bgColor={colors.sliderColor} flex={1}>
     <Search/>
         <HStack justifyContent={'space-between'} px={5}>
             <Text bold>Nearby bin station</Text>
