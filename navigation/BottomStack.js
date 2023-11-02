@@ -7,6 +7,7 @@ import HomeIcon from '../images/icons/HomeIcon';
 import LocationIcon from '../images/icons/LocationIcon';
 import MainIcon from '../images/icons/MainIcon';
 import ProfileIcon from '../images/icons/ProfileIcon';
+import Cart from '../screens/Cart';
 import Home from '../screens/Home';
 import Location from '../screens/Location';
 import DrawerStack from './DrawerStack';
@@ -46,7 +47,7 @@ const  BottomTabStack = () => {
         />
       <Tab.Screen
        name="Cart" 
-       component={Home} 
+       component={Cart} 
        options={{
         tabBarIcon:({focused})=><CartIcon focused={focused}/>
       }}
