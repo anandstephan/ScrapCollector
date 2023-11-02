@@ -5,6 +5,7 @@ import {
 import Login from '../screens/Login';
 import Signup from '../screens/Signup';
 import OnBoarding from '../screens/OnBoarding';
+import OnBoarding2 from '../screens/OnBoarding2';
 
 
 const Stack = createStackNavigator();
@@ -19,7 +20,8 @@ screenOptions={{
 >
         {/* <Stack.Screen name="SignupScreen" component={Signup}/> */}
         {/* <Stack.Screen name="LoginScreen" component={Login} /> */}
-        <Stack.Screen name="OnBoarding" component={OnBoarding} />
+        {/* <Stack.Screen name="OnBoarding" component={OnBoarding} /> */}
+        <Stack.Screen name="OnBoarding2" component={OnBoarding2} />
        
     </Stack.Navigator>
 }
