@@ -9,7 +9,8 @@ const ProfileDetailUpdate = () =>{
 
     const navigation = useNavigation()
     const onPressHandler=()=>{
-        navigation.navigate('About')
+        // navigation.navigate('About')
+        navigation.navigate('Feedback')
     }
 return <VStack flex={1} backgroundColor={colors.sliderColor} justifyContent={'space-between'} >
         <View>

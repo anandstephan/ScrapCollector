@@ -4,6 +4,6 @@ module.exports = {
     fontColor:"#02542E",
     btnColor:"#259E73",
     sliderColor:"#D6E8E1",
-    drawerBackgroundColor:"#B8DED0"
-    
+    drawerBackgroundColor:"#B8DED0",
+       
 }

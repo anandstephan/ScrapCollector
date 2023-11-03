@@ -4,6 +4,7 @@ import {
   } from '@react-navigation/stack';
 import About from '../screens/About';
 import AddressItemCart from '../screens/AddressItemCart';
+import Feedback from '../screens/Feedback';
 import Home from '../screens/Home';
 import PickupItemCartpItemCart from '../screens/PickupItemCart';
 import ProfileDetailUpdate from '../screens/ProfileDetailUpdate';
@@ -23,6 +24,7 @@ screenOptions={{
         <Stack.Screen name="AddressCart" component={AddressItemCart}/>
         <Stack.Screen name="ProfileUpdate" component={ProfileDetailUpdate}/>
         <Stack.Screen name="About" component={About}/>
+        <Stack.Screen name="Feedback" component={Feedback}/>
     </Stack.Navigator>
 }
 
