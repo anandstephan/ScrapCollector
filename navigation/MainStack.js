@@ -4,6 +4,7 @@ import {
   } from '@react-navigation/stack';
 import About from '../screens/About';
 import AddressItemCart from '../screens/AddressItemCart';
+import Challenge from '../screens/Challenge';
 import Checkout from '../screens/Checkout';
 import Feedback from '../screens/Feedback';
 import Logout from '../screens/Logout';
@@ -29,7 +30,8 @@ screenOptions={{
         <Stack.Screen name="Feedback" component={Feedback}/>
         <Stack.Screen name="Report" component={Report}/>
         <Stack.Screen name="Logout" component={Logout}/> */}
-        <Stack.Screen name="Checkout" component={Checkout} />
+        {/* <Stack.Screen name="Checkout" component={Checkout} /> */}
+        <Stack.Screen name="Challenge" component={Challenge} />
     </Stack.Navigator>
 }
 
