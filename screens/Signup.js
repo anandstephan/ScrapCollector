@@ -42,7 +42,7 @@ return <Box backgroundColor={colors.primary}>
             </View>
          
         </HStack>
-        <Button borderRadius="xl" backgroundColor={colors.btnColor} marginX={10} p={3}>
+        <Button borderRadius={'xl'} backgroundColor={colors.btnColor} marginX={10} p={3}>
         NEXT
         </Button>
         <HStack justifyContent={'center'} mt={5} alignItems={'space-between'}>

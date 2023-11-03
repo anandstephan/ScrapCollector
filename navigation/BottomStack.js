@@ -42,7 +42,7 @@ const  BottomTabStack = () => {
        name="Main"
       component={Home}
         options={{
-          tabBarIcon:({focused})=> <View style={{backgroundColor:colors.btnColor,height:80,width:80,justifyContent:'center',alignItems:"center",borderRadius:"100%",marginTop:-10}}><MainIcon focused={focused} /></View>,
+          tabBarIcon:({focused})=> <View style={{backgroundColor:colors.btnColor,height:80,width:80,justifyContent:'center',alignItems:"center",borderRadius:100,marginTop:-10}}><MainIcon focused={focused} /></View>,
         }}
         />
       <Tab.Screen

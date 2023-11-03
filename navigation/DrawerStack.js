@@ -4,6 +4,7 @@ import { Text } from 'native-base';
 import SidebarHeader from '../components/common/SidebarHeader';
 import colors from '../constants/colors';
 import Location from '../screens/Location';
+import Profile from '../screens/Profile';
 const Drawer = createDrawerNavigator();
 
 const DrawerStack = () => {
@@ -18,7 +19,7 @@ const DrawerStack = () => {
     
     >
       <Drawer.Screen name="Home" component={Home} />
-      <Drawer.Screen name="Profile" component={Home} />
+      <Drawer.Screen name="Profile" component={Profile} />
       <Drawer.Screen name="History" component={Home} />
       <Drawer.Screen name="AboutUs" component={Home}/>
       <Drawer.Screen name="Logout" component={Home}/>

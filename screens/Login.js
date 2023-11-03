@@ -47,7 +47,7 @@ return <Box backgroundColor={colors.primary}>
 
         </VStack>
        
-        <Button borderRadius="xl" backgroundColor={colors.btnColor} marginX={10}  p={3}>
+        <Button borderRadius={'xl'} backgroundColor={colors.btnColor} marginX={10}  p={3}>
         NEXT
         </Button>
         <Checkbox isChecked colorScheme="green" marginLeft={18}>
