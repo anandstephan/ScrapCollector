@@ -10,7 +10,6 @@ const Drawer = createDrawerNavigator();
 
 const DrawerStack = () => {
   const route = useRoute()
-  console.log("🚀 ~ file: DrawerStack.js:12 ~ DrawerStack ~ route:", route.params.screenName)
   return (
     <Drawer.Navigator
     screenOptions={{
@@ -41,7 +40,6 @@ const DrawerStack = () => {
       <Drawer.Screen name="Profile" component={Profile} />
       <Drawer.Screen name="History" component={Home} />
       <Drawer.Screen name="AboutUs" component={Home}/>
-      <Drawer.Screen name="Logout" component={Home}/>
       <Drawer.Screen name="Cart" component={Location}/>
     </Drawer.Navigator>
   );

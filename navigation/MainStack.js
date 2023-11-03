@@ -5,7 +5,7 @@ import {
 import About from '../screens/About';
 import AddressItemCart from '../screens/AddressItemCart';
 import Feedback from '../screens/Feedback';
-import Home from '../screens/Home';
+import Logout from '../screens/Logout';
 import PickupItemCartpItemCart from '../screens/PickupItemCart';
 import ProfileDetailUpdate from '../screens/ProfileDetailUpdate';
 import Report from '../screens/Report';
@@ -27,6 +27,7 @@ screenOptions={{
         <Stack.Screen name="About" component={About}/>
         <Stack.Screen name="Feedback" component={Feedback}/>
         <Stack.Screen name="Report" component={Report}/>
+        <Stack.Screen name="Logout" component={Logout}/>
     </Stack.Navigator>
 }
 
