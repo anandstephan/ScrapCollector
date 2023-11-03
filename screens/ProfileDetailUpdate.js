@@ -1,3 +1,4 @@
+import { useNavigation } from "@react-navigation/native"
 import { Box, Text, VStack,Image, Center, View } from "native-base"
 import CartButton from "../components/Cart/CartButton"
 import CustomInput from "../components/Profile/CustomInput"
@@ -5,6 +6,11 @@ import colors from "../constants/colors"
 
 
 const ProfileDetailUpdate = () =>{
+
+    const navigation = useNavigation()
+    const onPressHandler=()=>{
+        navigation.navigate('About')
+    }
 return <VStack flex={1} backgroundColor={colors.sliderColor} justifyContent={'space-between'} >
         <View>
         <Center mt={5}>
@@ -15,7 +21,7 @@ return <VStack flex={1} backgroundColor={colors.sliderColor} justifyContent={'sp
     <CustomInput placeholderTxt="Enter Your Email Address" />
     <CustomInput placeholderTxt="Enter Your Date of Birth" />
         </View>
-    <CartButton txt="Update Profile"/>
+    <CartButton txt="Update Profile" onPressHandler={onPressHandler}/>
 </VStack>
 }
 
