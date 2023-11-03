@@ -4,7 +4,7 @@ import { Text } from 'native-base';
 import SidebarHeader from '../components/common/SidebarHeader';
 import colors from '../constants/colors';
 import Location from '../screens/Location';
-import { useRoute } from '@react-navigation/native';
+import Profile from '../screens/Profile';
 const Drawer = createDrawerNavigator();
 
 const DrawerStack = () => {
@@ -36,8 +36,8 @@ const DrawerStack = () => {
     }}
     initialRouteName={route.params.screenName}
     >
-      <Drawer.Screen name="Home" component={Home}  />
-      <Drawer.Screen name="Location" component={Location}/>
+      <Drawer.Screen name="Home" component={Home} />
+      <Drawer.Screen name="Profile" component={Profile} />
       <Drawer.Screen name="History" component={Home} />
       <Drawer.Screen name="AboutUs" component={Home}/>
       <Drawer.Screen name="Logout" component={Home}/>

@@ -37,7 +37,7 @@ const AddressItemCart = () => {
 
         </Button>
 
-            <Button borderRadius="xl" borderWidth={1} bgColor={colors.sliderColor} marginX={15} p={4}
+            <Button borderRadius={'xl'} borderWidth={1} bgColor={colors.sliderColor} marginX={15} p={4}
             marginY={8}
             >
                 <Text style={{color:'#259E73'}}>Select Address at next step
