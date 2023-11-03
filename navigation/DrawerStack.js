@@ -5,6 +5,7 @@ import SidebarHeader from '../components/common/SidebarHeader';
 import colors from '../constants/colors';
 import Location from '../screens/Location';
 import Profile from '../screens/Profile';
+import { useRoute } from '@react-navigation/native';
 const Drawer = createDrawerNavigator();
 
 const DrawerStack = () => {
