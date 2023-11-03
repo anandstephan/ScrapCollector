@@ -8,6 +8,7 @@ import Feedback from '../screens/Feedback';
 import Home from '../screens/Home';
 import PickupItemCartpItemCart from '../screens/PickupItemCart';
 import ProfileDetailUpdate from '../screens/ProfileDetailUpdate';
+import Report from '../screens/Report';
 import BottomTabStack from './BottomStack';
 
 
@@ -25,6 +26,7 @@ screenOptions={{
         <Stack.Screen name="ProfileUpdate" component={ProfileDetailUpdate}/>
         <Stack.Screen name="About" component={About}/>
         <Stack.Screen name="Feedback" component={Feedback}/>
+        <Stack.Screen name="Report" component={Report}/>
     </Stack.Navigator>
 }
 

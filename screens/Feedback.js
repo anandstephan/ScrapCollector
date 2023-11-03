@@ -1,9 +1,15 @@
+import { useNavigation } from "@react-navigation/native"
 import { Heading, VStack,Text, Input } from "native-base"
 import { TextInput,StyleSheet } from "react-native"
 import CartButton from "../components/Cart/CartButton"
 import colors from "../constants/colors"
 
 const Feedback = () =>{
+    const navigation = useNavigation()
+const onPressHandler = () =>{
+    navigation.navigate('Report')
+}
+
 return <VStack bgColor={colors.sliderColor} flex={1} p="10" justifyContent={'space-between'}>
     <VStack>
     <Heading>Send Feedback</Heading>
@@ -12,7 +18,7 @@ could be doing better</Text>
 
     <TextInput style={styles.textInput} placeholder="Enter the Send Feedback" />
     </VStack>
-    <CartButton txt="SUBMIT FEEDBACK"/>
+    <CartButton txt="SUBMIT FEEDBACK" onPressHandler={onPressHandler}/>
 </VStack>
 }
 
