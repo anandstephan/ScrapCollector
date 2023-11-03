@@ -11,7 +11,7 @@ return <NativeBaseProvider>
     <SafeAreaView style={styles.container}>
       <NavigationContainer>
         {
-           <MainStack/>    
+           <MainStack/>     
           //  <LoginStack/> 
         }
     
